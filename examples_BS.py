@@ -93,6 +93,7 @@ dt
 np.random.seed(100)
 
 rn = np.random.standard_normal((M + 1, I))
+rn.shape
 rn.round(2)
 
 S = np.zeros_like(rn)
@@ -110,10 +111,15 @@ S
 
 # Plot
 
-t = np.arange(0, M + 1)
+# t = np.arange(0, M + 1)
 
 def f(x):
      return S0 * np.exp(r * x / M * T)
+
+
+m_grid = np.arange(0, M + 1)
+t_grid = T * m_grid / M
+exp_val = S0 * np.exp(r * t_grid)
 
 
 plt.style.use('seaborn')
@@ -122,7 +128,8 @@ mpl.rcParams['savefig.dpi'] = 300
 plt.figure(figsize=(10, 6))
 plt.plot(S[:, :100]);
 # plt.plot(S[:, 10:20]);
-plt.plot(t, f(t), 'r-', linewidth=3)
+# plt.plot(t, f(t), 'r-', linewidth=3)
+plt.plot(m_grid, exp_val, 'r-', linewidth=3)
 
 plt.show()
 
