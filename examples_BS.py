@@ -18,13 +18,14 @@ S0 = 100
 r = 0.05
 sigma = 0.2
 T = 1.0
-I = 10000
-# I = 1000000
+# I = 10000
+I = 1000000
 
-np.random.seed(100)
+# np.random.seed(100)
 
 ST = S0 * np.exp((r - sigma ** 2 / 2) * T +
      sigma * math.sqrt(T) * np.random.standard_normal(I))
+
 
 ST[:8].round(1)
 
@@ -32,7 +33,8 @@ ST.mean()
 S0 * math.exp(r * T)
 
 
-# Plot
+## Plot
+# Im Intervall der Abweichung ± σ \pm \sigma vom Erwartungswert sind 68,27 % aller Messwerte zu finden
 
 plt.style.use('seaborn')
 mpl.rcParams['savefig.dpi'] = 300 
@@ -43,7 +45,10 @@ plt.hist(ST, bins=1000, label='frequency');
 plt.axvline(ST.mean(), color='r', label='mean')
 plt.axvline(ST.mean() + ST.std(), color='y', label='sd up')
 plt.axvline(ST.mean() - ST.std(), color='y', label='sd down')
-plt.legend(loc=0); 
+# plt.title("Im Intervall der Abweichung ± \sigma vom Erwartungswert sind 68,27 % aller Messwerte zu finden")
+plt.title(r'Im Intervall der Abweichung ± $\sigma$ vom Erwartungswert sind 68,27 % aller Messwerte zu finden')
+plt.legend(loc=0);
+
 
 plt.show()
 
