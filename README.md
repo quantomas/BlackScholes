@@ -8,6 +8,8 @@ Es sind 100 Diskretisierungsschritte (Paramater M, x-Achse). Beide Parameter I, 
 ![Bild1](Figure_1.png)
 
 ## Verteilung / Histogramm der realisierten Werte
-50000 simulierte Stichproben der geometrischen Verteilung (Zufallsprozesses zum Zeitpunkt T)
+50000 simulierte Stichproben der geometrischen brownschen Bewegung (Zufallsprozesses zum Zeitpunkt T)
 ![Bild2](Figure_2.png)
 
+##
+to be continued... Anregungen, Kommentare, Issues, PR's sind erwünscht. Es werden demnächst einige Teile des Python-Codes in Jupyter-Notebooks besser "aufbereitet": noch mehr Visualisierungen und Parameterbeispiele...
